@@ -1,3 +1,10 @@
+# This script takes in a csv which has two columns: name of altR YouTuber, and the associated page url (which YouTube page contains multiple videos)
+# This script ignores fatal errors and skips to the next video within a page
+# This script creates a new folder (which folder is named after the respective altRighter)
+# This goes through and creates a new folder for each altRighter, scrapes all of the videos for the altRighter (simply moving beyond the errors to the next vid),
+# and then goes to the next and does this for all of the altRighters.
+# The end product of from this script is different folders for each altRighter each with scraped video text as .vtt files, for all available videos.
+
 import os # operating systems package
 import pandas as pd # data analysis package
 
@@ -26,11 +33,3 @@ for i in range(len(df)):
     url = df['page_url']
     download_subs(url[i]) # scrape vids for each page in said folder
     os.chdir("..") # move to parent directory after downloading videos into new folder
-
-
-# This script takes in a csv which has two columns: name of altR YouTuber, and the associated page url (which YouTube page contains multiple videos)
-# This script ignores fatal errors and skips to the next video within a page
-# This script creates a new folder (which folder is named after the respective altRighter)
-# This goes through and creates a new folder for each altRighter, scrapes all of the videos for the altRighter (simply moving beyond the errors to the next vid),
-# and then goes to the next and does this for all of the altRighters.
-# The end product of from this script is different folders for each altRighter each with scraped video text as .vtt files, for all available videos.
