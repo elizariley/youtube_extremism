@@ -27,7 +27,7 @@ vidID <- unique(vidID) # good, shouldn't be any duplicates
 
 get_all_comments <- function(vidID){
   # browser()
-  firstPart_http <- "https://www.googleapis.com/youtube/v3/commentThreads?key=AIzaSyCg9dPw32nUG6ATnElRa5hXsYXD0RnzSAM&textFormat=plainText&part=snippet&videoId="
+  firstPart_http <- "https://www.googleapis.com/youtube/v3/commentThreads?key=XXX&textFormat=plainText&part=snippet&videoId=" # Replace key=XXX with actual API key
   video_ID <- vidID
   maxRes <- "&maxResults=100"
   faith <- curl_fetch_memory(paste0(firstPart_http, video_ID, maxRes)) # named bc tested on faith goldy
