@@ -1,3 +1,5 @@
+# This script creates json files for each video with the following video information: title, channel name, number of views, likes, dislikes, number of subscriptions, and hashtags.
+
 import urllib.request
 import urllib.parse
 import urllib.error
@@ -68,5 +70,4 @@ for i in range(len(df)):
     counter += 1 #increase counter aka number each outputted file name
 
     print ('----------Extraction of data is complete. Check json file.----------')
-    
-    # This script creates json files for each video with the following video information: title, channel name, number of views, likes, dislikes, number of subscriptions, and hashtags.
+  
