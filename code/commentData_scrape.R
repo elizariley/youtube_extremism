@@ -1,7 +1,7 @@
 ################################################################################################################################################
 ## This script takes in a vector of YT vid IDS and extracts ALL comment text, vido ID, commenter name, timestamp, number of likes.            ##
 ## Uses four main functions to produce the desired output: get_all_comments, flatten_dfs, subset_removed_vids, & final_step.                  ##
-## Functions last updated 18 September 2019.                                                                                                            ##
+## Functions last updated 18 September 2019.                                                                                                  ##
 ################################################################################################################################################
 
 library(dplyr)
